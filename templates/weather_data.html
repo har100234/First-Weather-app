@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <div class="weather-container">
+        <h1>Weather in {{ data['name'] }}</h1>
+        <p>Temperature: {{ data['main']['temp'] }} °C</p>
+        <p>Weather: {{ data['weather'][0]['main'] }}</p>
+        <p>Description: {{ data['weather'][0]['description'] }}</p>
+    </div>
+</body>
+
+</html>
